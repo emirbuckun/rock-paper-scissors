@@ -21,6 +21,14 @@
   --color-dark-text: #3b4363;
   --color-score-text: #2a46c0;
   --color-header-outline: #606e85;
+
+  --url-image-paper: url("/src/assets/icon-paper.svg");
+  --url-image-rock: url("/src/assets/icon-rock.svg");
+  --url-image-scissors: url("/src/assets/icon-scissors.svg");
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -40,7 +48,7 @@ body {
 /* HEADER */
 .header {
   display: flex;
-  border: 3px solid var(--color-header-outline);
+  border: 0.1875rem solid var(--color-header-outline);
   max-width: 43.75rem;
   width: 100%;
   margin-top: 1.875rem;
@@ -49,7 +57,7 @@ body {
   justify-content: space-between;
 }
 
-.header .text {
+.text {
   font-size: 2.5rem;
   text-transform: uppercase;
   display: flex;
@@ -58,15 +66,77 @@ body {
   line-height: 2rem;
 }
 
-.header .score-box {
+.score-box {
   padding: 0.75rem 2.5rem;
   background-color: var(--color-white);
   color: var(--color-score-text);
   border-radius: 5px;
 }
 
-.header .score-box .score {
+.score {
   color: var(--color-dark-text);
   font-size: 3.5rem;
   font-weight: 700;
+}
+
+/* PLAY */
+.play {
+  width: 100%;
+  position: relative;
+  margin-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.triangle {
+  position: absolute;
+  align-self: center;
+  margin-top: 4.375rem;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  height: 10rem;
+  width: 10rem;
+  border: 1.125rem solid;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  background-color: var(--color-white);
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0.3125rem 0.3125rem grey;
+}
+
+.icon-paper {
+  background-image: var(--url-image-paper);
+  border-color: var(--color-paper);
+  transform: translateX(1.5rem);
+}
+
+.icon-paper:hover {
+  transform: translateX(1.5rem) scale(1.1);
+}
+
+.icon-rock {
+  background-image: var(--url-image-rock);
+  border-color: var(--color-rock);
+  transform: translateX(-10rem) translateY(13rem);
+}
+
+.icon-rock:hover {
+  transform: translateX(-10rem) translateY(13rem) scale(1.1);
+}
+
+.icon-scissors {
+  background-image: var(--url-image-scissors);
+  border-color: var(--color-scissors);
+  transform: translateX(8rem);
+}
+
+.icon-scissors:hover {
+  transform: translateX(8rem) scale(1.1);
 }
