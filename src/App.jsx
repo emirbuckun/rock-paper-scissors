@@ -29,12 +29,6 @@ function App() {
       </div>
       <Footer />
     </>
-    // <>
-    //   <Header score={score} />
-    //   <Play setUserChoice={setUserChoice} />
-    //   <Game userChoice={userChoice} score={score} setScore={setScore} />
-    //   <Footer />
-    // </>
   );
 }
 
