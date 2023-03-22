@@ -57,7 +57,7 @@ body {
   justify-content: space-between;
 }
 
-.text {
+.header .text {
   font-size: 2.5rem;
   text-transform: uppercase;
   display: flex;
@@ -99,44 +99,123 @@ body {
   justify-content: center;
 }
 
-.icon {
+.play .icon {
   height: 10rem;
   width: 10rem;
   border: 1.125rem solid;
   border-radius: 50%;
-  transition: transform 0.2s;
   background-color: var(--color-white);
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: inset 0 0.3125rem 0.3125rem grey;
 }
 
-.icon-paper {
+.play .icon-paper {
   background-image: var(--url-image-paper);
   border-color: var(--color-paper);
   transform: translateX(1.5rem);
 }
 
-.icon-paper:hover {
+.play .icon-paper:hover {
   transform: translateX(1.5rem) scale(1.1);
 }
 
-.icon-rock {
+.play .icon-rock {
   background-image: var(--url-image-rock);
   border-color: var(--color-rock);
   transform: translateX(-10rem) translateY(13rem);
 }
 
-.icon-rock:hover {
+.play .icon-rock:hover {
   transform: translateX(-10rem) translateY(13rem) scale(1.1);
 }
 
-.icon-scissors {
+.play .icon-scissors {
   background-image: var(--url-image-scissors);
   border-color: var(--color-scissors);
   transform: translateX(8rem);
 }
 
-.icon-scissors:hover {
+.play .icon-scissors:hover {
   transform: translateX(8rem) scale(1.1);
+}
+
+/* GAME */
+.game {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.game-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-computer {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-text {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.game-icon {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border-color: transparent;
+  border: 25px solid;
+  background-size: 50%;
+  background-color: var(--color-white);
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0.3125rem 0.3125rem grey;
+}
+
+.game-icon-paper {
+  background-image: var(--url-image-paper);
+  border-color: var(--color-paper);
+}
+
+.game-icon-rock {
+  background-image: var(--url-image-rock);
+  border-color: var(--color-rock);
+}
+
+.game-icon-scissors {
+  background-image: var(--url-image-scissors);
+  border-color: var(--color-scissors);
+}
+
+.game-play {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  transition: color 0.2s;
+}
+
+.game-play-text {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.play-again {
+  background-color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.play-again:hover {
+  color: red;
 }

@@ -43,18 +43,53 @@ const Game = ({ userChoice, score, setScore }) => {
   }, [computer]);
 
   return (
-    <div>
-      User Choice: {userChoice} <br />
-      Computer Choice: {computer} <br />
-      Result:
-      {playerWin === "win" && <h2>You Win</h2>}
-      {playerWin === "lose" && <h2>You Lose</h2>}
-      {playerWin === "draw" && <h2>Draw</h2>}
-      <Link to="/" onClick={() => setComputer()}>
-        Play Again
-      </Link>
+    <div className="game">
+      <div className="game-user">
+        <span className="game-text"> You Picked</span>
+        {userChoice == "paper" && (
+          <div className="game-icon game-icon-paper"></div>
+        )}
+        {userChoice == "rock" && (
+          <div className="game-icon game-icon-rock"></div>
+        )}
+        {userChoice == "scissors" && (
+          <div className="game-icon game-icon-scissors"></div>
+        )}
+      </div>
+
+      <div className="game-play">
+        <span className="game-play-text">
+          {playerWin == "win" && "You Win"}
+          {playerWin == "lose" && "You Lose"}
+          {playerWin == "draw" && "Draw"}
+        </span>
+        <Link to="/" className="play-again" onClick={() => setComputer()}>
+          Play Again
+        </Link>
+      </div>
+
+      <div className="game-computer">
+        <span className="game-text">Computer Picked</span>
+        {computer == "paper" && (
+          <div className="game-icon game-icon-paper"></div>
+        )}
+        {computer == "rock" && <div className="game-icon game-icon-rock"></div>}
+        {computer == "scissors" && (
+          <div className="game-icon game-icon-scissors"></div>
+        )}
+      </div>
     </div>
   );
 };
 
 export default Game;
+
+// User Choice: {userChoice} <br />
+//       Computer Choice: {computer} <br />
+//       Result:
+//       {playerWin === "win" && <h2>You Win</h2>}
+//       {playerWin === "lose" && <h2>You Lose</h2>}
+//       {playerWin === "draw" && <h2>Draw</h2>}
+//       <Link to="/" onClick={() => setComputer()}>
+//         Play Again
+//       </Link>
