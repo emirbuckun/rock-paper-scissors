@@ -5,6 +5,8 @@ const Game = ({ userChoice, score, setScore }) => {
   const [computer, setComputer] = useState("");
   const [playerWin, setPlayerWin] = useState("");
 
+  const [counter, setCounter] = useState(3);
+
   const newComputerPick = () => {
     const choices = ["rock", "paper", "scissors"];
     setComputer(choices[Math.floor(Math.random() * 3)]);
@@ -39,8 +41,16 @@ const Game = ({ userChoice, score, setScore }) => {
   };
 
   useEffect(() => {
-    Result();
-  }, [computer]);
+    const timer =
+      counter > 0
+        ? setInterval(() => {
+            setCounter(counter - 1);
+          }, 1000)
+        : Result();
+    return () => {
+      clearInterval(timer);
+    };
+  }, [counter, computer]);
 
   return (
     <div className="game">
@@ -57,22 +67,29 @@ const Game = ({ userChoice, score, setScore }) => {
 
       <div className="game-play">
         <span className="game-play-text">
-          {playerWin === "draw" ? playerWin : "you " + playerWin}
+          {playerWin === "draw" && playerWin}
+          {(playerWin === "win" || playerWin === "lose") && "you " + playerWin}
         </span>
-        <Link to="/" className="play-again" onClick={() => setComputer()}>
-          Play Again
-        </Link>
+        {playerWin !== "" && (
+          <Link to="/" className="play-again" onClick={() => setComputer()}>
+            Play Again
+          </Link>
+        )}
       </div>
 
       <div className="game-computer">
         <span className="game-text">Computer Picked</span>
-        <div
-          className={
-            "game-icon game-icon-" +
-            computer +
-            (playerWin === "lose" ? " icon-winner-" + computer : "")
-          }
-        ></div>
+        {counter == 0 ? (
+          <div
+            className={
+              "game-icon game-icon-" +
+              computer +
+              (playerWin === "lose" ? " icon-winner-" + computer : "")
+            }
+          ></div>
+        ) : (
+          <div className="counter">{counter}</div>
+        )}
       </div>
     </div>
   );
