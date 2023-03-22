@@ -18,6 +18,10 @@
   --color-paper: #4865f4;
   --color-rock: #dc2e4e;
 
+  --color-darken-scissors: #c9860c;
+  --color-darken-paper: #1b3ff1;
+  --color-darken-rock: #c2203e;
+
   --color-dark-text: #3b4363;
   --color-score-text: #2a46c0;
   --color-header-outline: #606e85;
@@ -175,22 +179,49 @@ body {
   background-color: var(--color-white);
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0.3125rem 0.3125rem grey;
 }
 
 .game-icon-paper {
   background-image: var(--url-image-paper);
   border-color: var(--color-paper);
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-paper);
 }
 
 .game-icon-rock {
   background-image: var(--url-image-rock);
   border-color: var(--color-rock);
+  box-shadow: inset 0 0.3125rem 0.3125rem grey, 0px 8px var(--color-darken-rock);
 }
 
 .game-icon-scissors {
   background-image: var(--url-image-scissors);
   border-color: var(--color-scissors);
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-scissors);
+}
+
+.icon-winner-paper {
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-paper),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.07),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.025);
+}
+
+.icon-winner-rock {
+  box-shadow: inset 0 0.3125rem 0.3125rem grey, 0px 8px var(--color-darken-rock),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.07),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.025);
+}
+
+.icon-winner-scissors {
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-scissors),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.07),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.025);
 }
 
 .game-play {
