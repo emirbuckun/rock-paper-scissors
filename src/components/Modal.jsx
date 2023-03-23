@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import close from "../assets/icon-close.svg";
+import rules from "../assets/image-rules.svg";
 
 const Modal = ({ toggle }) => {
   return ReactDOM.createPortal(
@@ -8,10 +10,10 @@ const Modal = ({ toggle }) => {
         <div className="modal-header">
           <h1>Rules</h1>
           <button onClick={toggle}>
-            <img src="../assets/icon-close.svg" alt="Close" srcSet="" />
+            <img src={close} alt="Close" srcSet="" />
           </button>
         </div>
-        <img src="../assets/image-rules.svg" alt="Rules" srcSet="" />
+        <img src={rules} alt="Rules" srcSet="" />
       </div>
     </div>,
     document.getElementById("modal")
