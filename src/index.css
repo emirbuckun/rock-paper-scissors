@@ -25,6 +25,7 @@
   --color-dark-text: #3b4363;
   --color-score-text: #2a46c0;
   --color-header-outline: #606e85;
+  --color-header-outline-lighten: #7c8aa0;
 
   --url-image-paper: url("/src/assets/icon-paper.svg");
   --url-image-rock: url("/src/assets/icon-rock.svg");
@@ -263,4 +264,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* FOOTER */
+.footer {
+  width: 100vw;
+}
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 1rem;
+}
+
+.rules {
+  position: absolute;
+  bottom: 1rem;
+  padding: 7px 25px;
+  right: 1rem;
+  border-radius: 0.4rem;
+  border: 3px solid var(--color-header-outline);
+  color: var(--color-header-outline-lighten);
+  background: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.rules:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-dark-text);
+  cursor: pointer;
 }
