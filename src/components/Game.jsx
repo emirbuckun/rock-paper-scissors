@@ -78,7 +78,7 @@ const Game = ({ userChoice, score, setScore }) => {
       </div>
 
       <div className="game-computer">
-        <span className="game-text">Computer Picked</span>
+        <span className="game-text">The House Picked</span>
         {counter == 0 ? (
           <div
             className={
