@@ -297,6 +297,10 @@ body {
   cursor: pointer;
 }
 
+.footer a {
+  color: var(--color-header-outline-lighten);
+}
+
 /* MODAL */
 .modal-container {
   position: absolute;
