@@ -271,13 +271,6 @@ body {
   width: 100vw;
 }
 
-.attribution {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 1rem;
-}
-
 .rules {
   position: absolute;
   bottom: 1rem;
