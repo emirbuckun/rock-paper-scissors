@@ -338,3 +338,14 @@ body {
 .modal-header button:hover {
   cursor: pointer;
 }
+
+/* MEDIA FOR SMALL DEVICES */
+@media screen and (max-width: 600px) {
+  .rules {
+    right: 0;
+    left: 50%;
+    bottom: 1rem;
+    width: 7rem;
+    transform: translate(-50%);
+  }
+}
