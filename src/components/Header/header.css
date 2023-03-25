@@ -34,10 +34,19 @@
 /* MEDIA FOR SMALL DEVICES */
 @media screen and (max-width: 45rem) {
   .header {
-    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .header .text {
+    font-size: 1.7rem;
+    line-height: 1.4rem;
   }
 
   .score-box {
-    padding: 0.5rem 2rem;
+    padding: 0.15rem 1.8rem;
+  }
+
+  .score {
+    font-size: 3rem;
   }
 }
