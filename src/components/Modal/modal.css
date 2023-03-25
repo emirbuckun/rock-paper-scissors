@@ -41,3 +41,27 @@
 .modal-header button:hover {
   cursor: pointer;
 }
+
+/* MEDIA FOR SMALL DEVICES */
+@media screen and (max-width: 500px) {
+  .modal-box {
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .modal-box img {
+    width: 90%;
+  }
+
+  .modal-header button {
+    position: absolute;
+    bottom: 5rem;
+  }
+}
