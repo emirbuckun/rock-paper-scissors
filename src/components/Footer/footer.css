@@ -26,7 +26,7 @@
 }
 
 /* MEDIA FOR SMALL DEVICES */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .rules {
     right: 0;
     left: 50%;
