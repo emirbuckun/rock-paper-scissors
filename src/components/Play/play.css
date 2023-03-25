@@ -89,13 +89,25 @@
     transform: translateX(4rem);
   }
 
+  .play .icon-paper:hover {
+    transform: translateX(4rem) scale(1.1);
+  }
+
   .play .icon-rock {
     border-color: var(--color-rock);
     transform: translateX(-9rem) translateY(10rem);
   }
 
+  .play .icon-rock:hover {
+    transform: translateX(-9rem) translateY(10rem) scale(1.1);
+  }
+
   .play .icon-scissors {
     border-color: var(--color-scissors);
     transform: translateX(6rem);
+  }
+
+  .play .icon-scissors:hover {
+    transform: translateX(6rem) scale(1.1);
   }
 }
