@@ -1,8 +1,8 @@
 .game {
   display: flex;
-  margin-top: 50px;
   flex-wrap: nowrap;
   align-items: center;
+  margin-top: 50px;
 }
 
 .game-user {
@@ -34,49 +34,6 @@
   background-color: var(--color-white);
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.game-icon-paper {
-  background-image: var(--url-image-paper);
-  border-color: var(--color-paper);
-  box-shadow: inset 0 0.3125rem 0.3125rem grey,
-    0px 8px var(--color-darken-paper);
-}
-
-.game-icon-rock {
-  background-image: var(--url-image-rock);
-  border-color: var(--color-rock);
-  box-shadow: inset 0 0.3125rem 0.3125rem grey, 0px 8px var(--color-darken-rock);
-}
-
-.game-icon-scissors {
-  background-image: var(--url-image-scissors);
-  border-color: var(--color-scissors);
-  box-shadow: inset 0 0.3125rem 0.3125rem grey,
-    0px 8px var(--color-darken-scissors);
-}
-
-.icon-winner-paper {
-  box-shadow: inset 0 0.3125rem 0.3125rem grey,
-    0px 8px var(--color-darken-paper),
-    0px 0px 0px 50px rgba(255, 255, 255, 0.07),
-    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
-    0px 0px 0px 150px rgba(255, 255, 255, 0.025);
-}
-
-.icon-winner-rock {
-  box-shadow: inset 0 0.3125rem 0.3125rem grey, 0px 8px var(--color-darken-rock),
-    0px 0px 0px 50px rgba(255, 255, 255, 0.07),
-    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
-    0px 0px 0px 150px rgba(255, 255, 255, 0.025);
-}
-
-.icon-winner-scissors {
-  box-shadow: inset 0 0.3125rem 0.3125rem grey,
-    0px 8px var(--color-darken-scissors),
-    0px 0px 0px 50px rgba(255, 255, 255, 0.07),
-    0px 0px 0px 100px rgba(255, 255, 255, 0.05),
-    0px 0px 0px 150px rgba(255, 255, 255, 0.025);
 }
 
 .game-play {
@@ -116,4 +73,111 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* MEDIA FOR SMALL DEVICES */
+@media screen and (max-width: 45rem) {
+  .game {
+    justify-content: center;
+  }
+
+  .game-user {
+    margin-right: 1.5rem;
+  }
+
+  .game-computer {
+    margin-left: 1.5rem;
+  }
+
+  .game-icon {
+    height: 125px;
+    width: 125px;
+    border: 15px solid;
+  }
+
+  .game-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .game-play {
+    position: absolute;
+    bottom: 6rem;
+  }
+
+  .counter {
+    height: 125px;
+    width: 125px;
+    font-size: 4rem;
+  }
+}
+
+.game-icon-paper {
+  background-image: var(--url-image-paper);
+  border-color: var(--color-paper);
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-paper);
+}
+
+.game-icon-rock {
+  background-image: var(--url-image-rock);
+  border-color: var(--color-rock);
+  box-shadow: inset 0 0.3125rem 0.3125rem grey, 0px 8px var(--color-darken-rock);
+}
+
+.game-icon-scissors {
+  background-image: var(--url-image-scissors);
+  border-color: var(--color-scissors);
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-scissors);
+}
+
+.icon-winner-paper {
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-paper),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.04),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.025),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.015);
+}
+
+.icon-winner-rock {
+  box-shadow: inset 0 0.3125rem 0.3125rem grey, 0px 8px var(--color-darken-rock),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.04),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.025),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.015);
+}
+
+.icon-winner-scissors {
+  box-shadow: inset 0 0.3125rem 0.3125rem grey,
+    0px 8px var(--color-darken-scissors),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.04),
+    0px 0px 0px 100px rgba(255, 255, 255, 0.025),
+    0px 0px 0px 150px rgba(255, 255, 255, 0.015);
+}
+
+/* MEDIA FOR SMALL DEVICES */
+@media screen and (max-width: 45rem) {
+  .icon-winner-paper {
+    box-shadow: inset 0 0.3125rem 0.3125rem grey,
+      0px 8px var(--color-darken-paper),
+      0px 0px 0px 15px rgba(255, 255, 255, 0.04),
+      0px 0px 0px 40px rgba(255, 255, 255, 0.02),
+      0px 0px 0px 75px rgba(255, 255, 255, 0.015);
+  }
+
+  .icon-winner-rock {
+    box-shadow: inset 0 0.3125rem 0.3125rem grey,
+      0px 8px var(--color-darken-rock),
+      0px 0px 0px 15px rgba(255, 255, 255, 0.04),
+      0px 0px 0px 40px rgba(255, 255, 255, 0.02),
+      0px 0px 0px 75px rgba(255, 255, 255, 0.015);
+  }
+
+  .icon-winner-scissors {
+    box-shadow: inset 0 0.3125rem 0.3125rem grey,
+      0px 8px var(--color-darken-scissors),
+      0px 0px 0px 15px rgba(255, 255, 255, 0.04),
+      0px 0px 0px 40px rgba(255, 255, 255, 0.02),
+      0px 0px 0px 75px rgba(255, 255, 255, 0.015);
+  }
 }
