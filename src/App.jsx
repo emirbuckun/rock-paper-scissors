@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Play from "./components/Play/Play";
-import Game from "./components/Game/Game";
-import Footer from "./components/Footer/Footer";
+import Header from "/src/components/Header/Header";
+import Play from "/src/components/Play/Play";
+import Game from "/src/components/Game/Game";
+import Footer from "/src/components/Footer/Footer";
 
 function App() {
   const [userChoice, setUserChoice] = useState("");

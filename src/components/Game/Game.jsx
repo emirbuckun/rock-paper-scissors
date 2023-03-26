@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./game.css";
+import "/src/components/Game/game.css";
 
 const Game = ({ userChoice, score, setScore }) => {
   const [computer, setComputer] = useState("");

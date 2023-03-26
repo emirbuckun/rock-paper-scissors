@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Triangle from "/src/assets/bg-triangle.svg";
-import "./play.css";
+import "/src/components/Play/play.css";
 
 const Play = ({ setUserChoice }) => {
   const setChoice = (e) => {

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import close from "/src/assets/icon-close.svg";
 import rules from "/src/assets/image-rules.svg";
-import "./modal.css";
+import "/src/components/Modal/modal.css";
 
 const Modal = ({ toggle }) => {
   return ReactDOM.createPortal(

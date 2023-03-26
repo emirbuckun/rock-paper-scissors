@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "/src/components/Header/header.css";
 
 const Header = ({ score }) => {
   return (
