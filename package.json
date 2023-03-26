@@ -1,6 +1,5 @@
 {
   "name": "rock-paper-scissors",
-  "homepage": "https://emirbuckun.github.io/rock-paper-scissors/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
