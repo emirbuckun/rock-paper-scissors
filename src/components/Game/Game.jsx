@@ -18,27 +18,19 @@ const Game = ({ userChoice, score, setScore }) => {
   }, []);
 
   const Result = () => {
-    if (userChoice === "rock" && computer === "scissors") {
+    if (
+      (userChoice === "rock" && computer === "scissors") ||
+      (userChoice === "scissors" && computer === "paper") ||
+      (userChoice === "paper" && computer === "rock")
+    ) {
       setPlayerWin("win");
       setScore(score + 1);
       localStorage.setItem("localScore", score + 1);
-    } else if (userChoice === "rock" && computer === "paper") {
-      setPlayerWin("lose");
-      setScore(score - 1);
-      localStorage.setItem("localScore", score - 1);
-    } else if (userChoice === "scissors" && computer === "paper") {
-      setPlayerWin("win");
-      setScore(score + 1);
-      localStorage.setItem("localScore", score + 1);
-    } else if (userChoice === "scissors" && computer === "rock") {
-      setPlayerWin("lose");
-      setScore(score - 1);
-      localStorage.setItem("localScore", score - 1);
-    } else if (userChoice === "paper" && computer === "rock") {
-      setPlayerWin("win");
-      setScore(score + 1);
-      localStorage.setItem("localScore", score + 1);
-    } else if (userChoice === "paper" && computer === "scissors") {
+    } else if (
+      (userChoice === "rock" && computer === "paper") ||
+      (userChoice === "scissors" && computer === "rock") ||
+      (userChoice === "paper" && computer === "scissors")
+    ) {
       setPlayerWin("lose");
       setScore(score - 1);
       localStorage.setItem("localScore", score - 1);
