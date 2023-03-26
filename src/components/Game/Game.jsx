@@ -21,21 +21,27 @@ const Game = ({ userChoice, score, setScore }) => {
     if (userChoice === "rock" && computer === "scissors") {
       setPlayerWin("win");
       setScore(score + 1);
+      localStorage.setItem("localScore", score + 1);
     } else if (userChoice === "rock" && computer === "paper") {
       setPlayerWin("lose");
       setScore(score - 1);
+      localStorage.setItem("localScore", score - 1);
     } else if (userChoice === "scissors" && computer === "paper") {
       setPlayerWin("win");
       setScore(score + 1);
+      localStorage.setItem("localScore", score + 1);
     } else if (userChoice === "scissors" && computer === "rock") {
       setPlayerWin("lose");
       setScore(score - 1);
+      localStorage.setItem("localScore", score - 1);
     } else if (userChoice === "paper" && computer === "rock") {
       setPlayerWin("win");
       setScore(score + 1);
+      localStorage.setItem("localScore", score + 1);
     } else if (userChoice === "paper" && computer === "scissors") {
       setPlayerWin("lose");
       setScore(score - 1);
+      localStorage.setItem("localScore", score - 1);
     } else {
       setPlayerWin("draw");
     }
